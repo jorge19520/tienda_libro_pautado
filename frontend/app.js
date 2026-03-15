@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             createOrder: async function(data, actions) {
                 try {
                     // Update this URL if your render app name is different
-                    const response = await fetch('https://tienda-libro-backend.onrender.com/create-paypal-order', {
+                    const response = await fetch('https://tienda-libro-pautado.onrender.com/create-paypal-order', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setLoading(true);
                 try {
                     // Update this URL if your render app name is different
-                    const response = await fetch('https://tienda-libro-backend.onrender.com/capture-paypal-order', {
+                    const response = await fetch('https://tienda-libro-pautado.onrender.com/capture-paypal-order', {
                         method: 'POST',
                         body: JSON.stringify({
                             order_id: data.orderID
