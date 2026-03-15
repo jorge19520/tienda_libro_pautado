@@ -106,12 +106,17 @@ body {
     min-width: 40%;
     position: relative;
     overflow: hidden;
+    background-color: #ffffff; /* White background to blend with white PDF covers */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .book-cover {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Don't crop the cover */
     transition: transform 0.5s ease;
 }
 
